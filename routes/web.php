@@ -21,7 +21,12 @@ Route::get('/lara', function () {
 
 Route::get('/posts', 'PostsController@index');
 
+Route::post('/posts/{id}', 'PostsController@posodobi');
+
 Route::get('/posts/{id}', 'PostsController@show');
+
+Route::get('/posts/{id}/edit', 'PostsController@edit');
+
 
 Route::get('/nova', function () {
     return view('nova');

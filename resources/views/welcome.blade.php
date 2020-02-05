@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Peskovnik2
+                    Peskovnik
                 </div>
 
                 <div class="links">

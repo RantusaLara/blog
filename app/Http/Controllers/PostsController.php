@@ -70,7 +70,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::find($id);
+        return view('edit')->with('post', $post);
     }
 
     /**
@@ -83,6 +84,20 @@ class PostsController extends Controller
     public function update(Request $request)
     {
         //
+    }
+
+    public function posodobi(Request $request, $id)
+    {
+        $input = $request->input();
+
+        $post = Post::find($id);
+
+        $post->naslov = $input['firstName'];
+        $post->opis = $input['lastName'];
+
+        $post->update();
+
+        return redirect('/izpis');
     }
 
     /**
