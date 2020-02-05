@@ -109,6 +109,10 @@ class PostsController extends Controller
     public function destroy($id)
     {
         //
+        $post = Post::find($id);
+        $post->delete();
+
+        // redirect here, pazi da imas ruto za destroy v web.php
     }
 
     public function izpis() {
