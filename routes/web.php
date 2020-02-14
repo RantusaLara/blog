@@ -27,6 +27,9 @@ Route::get('/posts/{id}', 'PostsController@show');
 
 Route::get('/posts/{id}/edit', 'PostsController@edit');
 
+Route::get('/posts/{id}/delete', 'PostsController@destroy');
+
+
 
 Route::get('/nova', function () {
     return view('nova');

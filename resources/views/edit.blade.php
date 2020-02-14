@@ -11,9 +11,11 @@
 </head>
 
 <body>
+<div class="container" style="width:700px; margin: 50px; text-align: center;">
     <h1>Edit</h1>
-    <div class="content">
-        <div class="row items-push justify-content-center">
+    </div>
+    <div class="container" >
+        <div class="row items-push justify-content-right" >
             <div class="col-md-10 col-xl-5">
                 <form method="POST" action="/posts/{{ $post->id }}">
                     @csrf
@@ -27,6 +29,7 @@
                                 Valid first name is required.
                             </div>
                         </div>
+                        
                         <div class="col-md-6 mb-3">
                             <label for="lastName">Last name</label>
                             <input type="text" class="form-control" id="lastName" name="lastName" placeholder=""
@@ -43,7 +46,18 @@
                         </button>
                     </div>
 
+                    <div class="form-group">
+                        <button class="btn btn-primary">
+                            <a style="color: white" href='/posts/{{ $post->id }}/delete'>Izbrisi</a>
+                        </button>
+                    </div>
+
+
                 </form>
+
+
+
+
             </div>
         </div>
     </div>

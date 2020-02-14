@@ -112,6 +112,8 @@ class PostsController extends Controller
         $post = Post::find($id);
         $post->delete();
 
+        return redirect('/izpis');
+
         // redirect here, pazi da imas ruto za destroy v web.php
     }
 
